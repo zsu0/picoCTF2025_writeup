@@ -1,10 +1,9 @@
 # WebSockFish picoCTF - Writeup
----
+
 
 > **Category**: Web Exploitation  
 > **Difficulty**: Medium  
 
----
 
 ## Description
 
@@ -12,13 +11,11 @@
 > He won't go easy on you!
 > You can find the challenge [here](http://verbal-sleep.picoctf.net:54668/)
 
----
 
 ## Hint
 
 > Try understanding the code and how the websocket client is interacting with the server.
 
----
 
 ## Initial Recon
 
@@ -26,7 +23,6 @@ The first step I did was visiting the link provided. It loads up a chess interfa
 
 Personally, I tried to beat the game, but even after winning, I still didn’t get the flag.
 
----
 
 ## Solution
 
@@ -36,8 +32,6 @@ Inside, I found references to:
 - `stockfish.min.js` – evidently, it's Stockfish running in the browser.
 - WebSockets – used for communicating with the engine.
 - JavaScript functions like `sendMessage()` and `updateChat()` – these seem to handle the user’s messages and bot responses.
-
-Here's the relevant part of the code:
 
 ```js
 function sendMessage(message) {
@@ -92,7 +86,6 @@ And boom, here's the flag:
 
 <img width="742" height="113" alt="image" src="https://github.com/user-attachments/assets/efdfe6b2-bcb0-4e6c-80ec-e996c6f1c85c" />
 
----
 
 ## Flag
 
@@ -100,7 +93,6 @@ And boom, here's the flag:
 picoCTF{c1i3nt_s1d3_w3b_s0ck3t5_50441bef}
 ```
 
----
 
 ## Summary
 
@@ -108,5 +100,5 @@ This was a **client-side WebSocket exploitation** challenge disguised as a chess
 
 ---
 
-*Author: [zsu0](https://github.com/zsu0)*
+*Author: [zsu0](https://github.com/zsu0)* <br>
 *Created: 11-07-2025*
