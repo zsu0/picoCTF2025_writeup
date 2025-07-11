@@ -1,21 +1,21 @@
 # WebSockFish picoCTF - Writeup
-
+<br>
 
 > **Category**: Web Exploitation  
 > **Difficulty**: Medium  
-
+<br>
 
 ## Description
 
 > Can you win in a convincing manner against this chess bot?  
 > He won't go easy on you!
 > You can find the challenge [here](http://verbal-sleep.picoctf.net:54668/)
-
+<br>
 
 ## Hint
 
 > Try understanding the code and how the websocket client is interacting with the server.
-
+<br>
 
 ## Initial Recon
 
@@ -85,19 +85,19 @@ And boom, here's the flag:
 > *"Huh???? How can I be losing this badly... I resign... here's your flag: picoCTF{c1i3nt_s1d3_w3b_s0ck3t5_50441bef}"*
 
 <img width="742" height="113" alt="image" src="https://github.com/user-attachments/assets/efdfe6b2-bcb0-4e6c-80ec-e996c6f1c85c" />
-
+<br>
 
 ## Flag
 
 ```
 picoCTF{c1i3nt_s1d3_w3b_s0ck3t5_50441bef}
 ```
-
+<br>
 
 ## Summary
 
 This was a **client-side WebSocket exploitation** challenge disguised as a chess match. The trick wasn’t to outplay Stockfish, but to understand how the browser communicates with it and manipulate that.
-
+<br>
 ---
 
 *Author: [zsu0](https://github.com/zsu0)* <br>
